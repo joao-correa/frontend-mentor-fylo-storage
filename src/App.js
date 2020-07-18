@@ -6,10 +6,10 @@ function App() {
   return (
     <div className="app">
       <Home />
-      <div class="attribution">
+      {/* <span class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/theVictoor">JV</a>.
-      </div>
+      </span> */}
     </div>
   );
 }

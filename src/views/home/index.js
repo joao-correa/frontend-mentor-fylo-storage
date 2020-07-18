@@ -1,4 +1,5 @@
 import React from 'react';
+import './home-mobile.css';
 import './home.css';
 import logo from './../../assets/logo.svg';
 import iconDocument from './../../assets/icon-document.svg'
@@ -27,6 +28,10 @@ function Features(){
 }
 
 function Storage () {
+  const maxAvailableUsage = 1000;
+  const currentUsage = 815;
+  const currentUsagePercentage = currentUsage * 100 / maxAvailableUsage;
+
   return (
     <>
       <div className="storage">
@@ -35,21 +40,21 @@ function Storage () {
         </span>
         <div className="memory-used">
           <div className="memory-used-bar">
-            {/* style={{ width: `${81}%` }} */}
-            <div className="current-usage" style={{ width: `${81.5}%` }}>
+            <div className="current-usage" style={{ width: `${currentUsagePercentage}%` }}>
               <div className="circle"></div>
             </div>
           </div>
           <div className="limit-legend">
             <span className='text-bold'> 0 GB </span>
-            <span className='text-bold'> 1000 GB </span>
+            <span className='text-bold'> {maxAvailableUsage} GB </span>
           </div>
         </div>
       </div>
       <div className="memory-left">
-        <span className='big-bold'> 185 </span>
+        <span className='big-bold'> { maxAvailableUsage - currentUsage } </span>
         <span className='light-gray'> GB LEFT </span>
       </div>
+      <span className='arrow'></span>
     </>
   );
 }
