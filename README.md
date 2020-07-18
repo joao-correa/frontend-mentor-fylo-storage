@@ -1,4 +1,4 @@
-#   <p align='center'> Frontend Mentor Challange </p>
+#   <p align='center'> Frontend Mentor Challenge </p>
 
 ## :wrench: Setup
 ```dash
